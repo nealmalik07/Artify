@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.auction-body {
+    margin-inline: 7%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f9f9;
+    color: black;
+    text-align: center;
+}
+
+.auction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid black;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+}
+
+.auction-main {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.auction-footer {
+    background-color: white;
+    padding: 20px;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.auction-footer h3 {
+    margin-bottom: 10px;
+}
+
+.newsletter-input {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.newsletter-button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #003e40;
+    color: white;
+}
+
+.status-indicators {
+    margin-top: 10px;
+}
+
+.status-indicators span {
+    margin-right: 10px;
+}
+
+.auction-item {
+    border: 1px solid #ccc;
+    max-width: 280px;
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.auction-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.auction-item h3 {
+    margin-bottom: 10px;
+}
+
+.auction-item p {
+    margin-bottom: 8px;
+}
+
+.auction-list-grid {
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+.auction-item {
+    background-color: white !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    padding: 0 !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.auction-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+}
+
+.auction-item h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    padding: 15px 15px 5px 15px;
+}
+
+.auction-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+}
+
+.auction-item p {
+    margin: 5px 0;
+    padding: 0 15px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* First paragraph - description/year */
+.auction-item p:nth-of-type(1) {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Hide the original text content of price paragraphs */
+.auction-item p:nth-of-type(2),
+.auction-item p:nth-of-type(3),
+.auction-item p:nth-of-type(4) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Time left styling */
+.auction-item p:nth-of-type(4) {
+    margin-bottom: 15px;
+}
+
+/* Timer text color */
+.timer {
+    color: #d63031;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+/* Form styling */
+.auction-item form {
+    padding: 0 15px 15px 15px;
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.auction-item input[type="number"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.auction-item button {
+    background-color: black !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.auction-item button:hover {
+    background-color: #222 !important;
+}
+
+@media (max-width: 768px) {
+    #auction-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .auction-item img {
+        height: 180px;
+    }
+}
